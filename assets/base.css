@@ -1,5 +1,5 @@
 /* ===========================================================================
-   RECY'STEM-PRO — feuille de style de la maquette de refonte
+   RECY'STEM-PRO : feuille de style de la maquette de refonte
    Direction artistique : « le dossier réglementaire ».
    Papier légèrement froid, encre sombre, un seul accent tiré du logo (#A8C61E)
    réservé aux actions et aux données. Aucune illustration de feuille verte.
@@ -19,7 +19,7 @@
   --rule:       #cdcfc0;
   --rule-2:     #dcdecf;
 
-  --accent:     #a8c61e;   /* logo — aplats, boutons, soulignements */
+  --accent:     #a8c61e;   /* logo : aplats, boutons, soulignements */
   --accent-txt: #58690a;   /* variante lisible du même vert sur papier */
   --accent-ink: #14170a;   /* encre posée sur l'accent */
   --accent-wash:#eef3d2;
@@ -336,7 +336,7 @@ nav.main a:hover, nav.main a[aria-current="page"] { color: var(--ink); border-co
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
 
-/* fiche « dossier » — visuel signature, à la place d'une banque d'images */
+/* fiche « dossier » : visuel signature, à la place d'une banque d'images */
 .fiche {
   border: 1.5px solid var(--ink);
   background: var(--paper-3);
@@ -606,7 +606,7 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 .aside-card p:last-child { margin-bottom: 0; }
 .aside-card ul { display: grid; gap: 0.5rem; }
 .aside-card ul li { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem; font-size: var(--step--1); color: var(--ink-2); }
-.aside-card ul li::before { content: "—"; color: var(--accent-txt); font-family: var(--mono); }
+.aside-card ul li::before { content: "·"; color: var(--accent-txt); font-family: var(--mono); }
 .aside-card--ink { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .aside-card--ink h3 { color: var(--paper); }
 .aside-card--ink p { color: #c3c7b2; }
@@ -705,7 +705,7 @@ footer.site { background: var(--paper-2); font-size: var(--step--1); }
    l'alignement saute. Le marqueur absolu tient quel que soit le contenu. */
 
 .aside-card ul li { display: block; position: relative; padding-left: 1.2rem; }
-.aside-card ul li::before { position: absolute; left: 0; top: 0; content: "—"; }
+.aside-card ul li::before { position: absolute; left: 0; top: 0; content: "·"; }
 
 /* une grille imbriquée ne doit jamais étirer ses rangées pour combler sa colonne */
 form.short, .coords, .aside-card ul { align-content: start; }

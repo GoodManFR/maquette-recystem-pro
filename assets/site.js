@@ -1,5 +1,5 @@
 /* ===========================================================================
-   RECY'STEM-PRO — comportements de la maquette
+   RECY'STEM-PRO · comportements de la maquette
    Aucune dépendance. Tout est dégradable : sans JS, les pages restent lisibles
    et le téléphone reste cliquable.
    =========================================================================== */
@@ -211,7 +211,7 @@
       'Vous relevez de ' + produits.length + ' filière' + (produits.length > 1 ? 's' : '') +
       ' : ' + produits.map(function (p) { return FIL[p].nom; }).join(' · ') +
       '. Chacune donne lieu à un identifiant distinct, délivré par l’ADEME et à faire figurer sur vos documents de vente.',
-      'Code env. art. L541-10-13 — registre SYDEREP / ADEME'
+      'Code env. art. L541-10-13 · registre SYDEREP / ADEME'
     ));
 
     obligations.push(li(
@@ -230,15 +230,15 @@
     /* 2. Établissement */
     if (pays === 'hors-ue') {
       obligations.push(li(
-        'Mandataire établi en France — obligatoire',
+        'Mandataire établi en France, obligatoire',
         'Votre société n’étant pas établie dans l’Union, vous ne pouvez pas vous enregistrer directement : la réglementation exige la désignation d’un mandataire établi en France, qui reprend vos obligations en son nom pour votre compte. C’est exactement notre métier.',
-        'Code env. art. L541-10' + (produits.indexOf('eee') > -1 ? ' — art. 17 de la directive 2012/19/UE (DEEE)' : '')
+        'Code env. art. L541-10' + (produits.indexOf('eee') > -1 ? ' · art. 17 de la directive 2012/19/UE (DEEE)' : '')
       ));
     } else if (pays === 'ue') {
       obligations.push(li(
         'Enregistrement direct ou mandataire',
         'Établi dans un autre État membre, vous pouvez vous enregistrer vous-même en France, ou désigner un mandataire. En pratique, la déclaration se fait en français, les barèmes diffèrent d’un éco-organisme à l’autre, et le mandat évite d’avoir à suivre les évolutions réglementaires nationales.',
-        'Directive DEEE 2012/19/UE, art. 17 — vente à distance'
+        'Directive DEEE 2012/19/UE, art. 17 · vente à distance'
       ));
     } else {
       obligations.push(li(
@@ -252,7 +252,7 @@
     if (canal === 'marketplace') {
       obligations.push(li(
         'Votre place de marché va vous demander votre UIN',
-        'Les places de marché ont l’obligation de vérifier que leurs vendeurs sont enregistrés, et de se substituer à eux à défaut. Sans identifiant, le déréférencement des annonces est le scénario le plus fréquent — souvent sans préavis utile.',
+        'Les places de marché ont l’obligation de vérifier que leurs vendeurs sont enregistrés, et de se substituer à eux à défaut. Sans identifiant, le déréférencement des annonces est le scénario le plus fréquent, souvent sans préavis utile.',
         'Code env. art. L541-10-9'
       ));
     }
@@ -261,7 +261,7 @@
         obligations.push(li(
           'Signalétique de tri (Triman) et information du consommateur',
           'Apposition du logo Triman et de l’information sur les modalités de tri, sur le produit, son emballage ou, à défaut, en dématérialisé.',
-          'Loi AGEC art. 17 — décret n° 2021-835'
+          'Loi AGEC art. 17 · décret n° 2021-835'
         ));
       }
     }
@@ -269,7 +269,7 @@
       obligations.push(li(
         'Vente professionnelle : filières et barèmes distincts',
         'Les équipements professionnels relèvent de catégories et d’éco-organismes différents de ceux du grand public. C’est la source d’erreur de déclaration la plus courante que nous rencontrons.',
-        'Annexe I de la directive 2012/19/UE — catégories professionnelles'
+        'Annexe I de la directive 2012/19/UE · catégories professionnelles'
       ));
     }
 
@@ -277,8 +277,8 @@
     if (volume === 'gros') {
       obligations.push(li(
         'Système individuel : à étudier sérieusement',
-        'Au-delà d’un certain volume, la mise en place d’un système individuel approuvé devient économiquement pertinente face à l’éco-contribution versée à un éco-organisme. Cela suppose un dossier d’approbation et des garanties financières — c’est l’une de nos quatre prestations.',
-        'Code env. art. L541-10, II — système individuel approuvé'
+        'Au-delà d’un certain volume, la mise en place d’un système individuel approuvé devient économiquement pertinente face à l’éco-contribution versée à un éco-organisme. Cela suppose un dossier d’approbation et des garanties financières. C’est l’une de nos quatre prestations.',
+        'Code env. art. L541-10, II · système individuel approuvé'
       ));
     } else if (volume === 'inconnu') {
       obligations.push(li(
@@ -292,7 +292,7 @@
     obligations.push(li(
       'À défaut : sanction administrative',
       'Le non-respect des obligations d’enregistrement et de déclaration est passible d’une amende administrative, prononcée par filière et par manquement.',
-      'Code env. art. L541-9-4 — montants à vérifier au cas par cas'
+      'Code env. art. L541-9-4 · montants à vérifier au cas par cas'
     ));
 
     /* prestations conseillées */
@@ -309,7 +309,7 @@
     result.innerHTML =
       '<div class="result__hd">' +
       '<h3>' + (pays === 'hors-ue'
-        ? 'Oui — et vous avez besoin d’un mandataire en France'
+        ? 'Oui, et vous avez besoin d’un mandataire en France'
         : 'Oui, vous êtes concerné' + (produits.length > 1 ? ' par plusieurs filières' : '')) + '</h3>' +
       '<p>Récapitulatif établi à partir de vos quatre réponses. Il ne remplace pas un audit, mais il vous donne le périmètre exact à traiter.</p>' +
       '</div>' +
@@ -322,7 +322,7 @@
       '<div class="tag-row">' + presta.map(function (p) { return '<span class="tag">' + p + '</span>'; }).join('') + '</div>' +
       '</div>' +
       '<div class="result__cta">' +
-      '<a class="btn" href="tel:+33143202138">Parler à un expert — 01 43 20 21 38</a>' +
+      '<a class="btn" href="tel:+33143202138">Parler à un expert&nbsp;: 01 43 20 21 38</a>' +
       '<button type="button" class="btn btn--ghost" data-print>Imprimer ce récapitulatif</button>' +
       '<p>Réponse le jour même, du lundi au vendredi.</p>' +
       '</div>';
