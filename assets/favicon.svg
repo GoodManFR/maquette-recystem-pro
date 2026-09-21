@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Recy'stem-Pro">
+  <rect width="32" height="32" fill="#15170f"/>
+  <path d="M6 7h13l7 7v11H6z" fill="none" stroke="#f1f2ec" stroke-width="2"/>
+  <path d="M19 7v7h7z" fill="#a8c61e"/>
+  <path d="M10 19h9" stroke="#a8c61e" stroke-width="2"/>
+</svg>
